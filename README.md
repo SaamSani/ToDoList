@@ -25,3 +25,50 @@ A simple To-Do List application built with Node.js, Express, PostgreSQL, and EJS
    ```bash
    git clone https://github.com/SaamSani/ToDoList.git
    cd ToDoList
+2. Install dependencies:
+   
+   ```bash
+   npm install
+3. Ensure PostgreSQL is installed on your machine. You can download and install it from here.
+   Create a new database called permalist. You can do this by logging into the PostgreSQL terminal and running:
+
+   ```bash
+   CREATE DATABASE permalist;
+4. Create the items table inside the permalist database by running the following SQL command:
+
+   ```bash
+   CREATE TABLE items (
+   id SERIAL PRIMARY KEY,
+   title VARCHAR(255)
+   );
+5. Update the db connection settings in index.js,
+   Inside your solution.js file, update the database connection settings with your PostgreSQL credentials as shown below:
+
+   ```bash
+   const db = new pg.Client({
+   user: "your-username",   // replace with your PostgreSQL username
+   host: "localhost",
+   database: "permalist",   // the database name you created
+   password: "your-password",   // your PostgreSQL password
+   port: 5432,
+   });
+6. Run:
+
+   ```bash
+   nodemon index.js
+7. Open your browser and navigate to:
+
+   ```bash
+   http://localhost:3000
+
+
+
+
+   
+
+   
+
+
+   
+
+
